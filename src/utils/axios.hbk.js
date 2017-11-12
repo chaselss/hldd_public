@@ -13,11 +13,11 @@ import axios from 'axios'
 //  			obj[option](res);
 // 		})
 // }
-export default function homedata(obj, url,option) {
+export default function homedata(obj, url,option,{curpage,page}) {
 	axios.post(url,{
 		keyword:'',
-		curpage:1,
-		page:5
+		curpage,
+		page
 	})
 			.then((res)=>{
 		obj[option](res);

@@ -87,7 +87,7 @@
 			},*/
 			loadTop() {
 				this.curpage++;
-				axiosUtil(this, `/api/api/index.php?c=goods&a=goods_list&gc_id=2139&page=10&curpage=${this.curpage}&appversion=1.3.0&devicetype=weixin&phonetype=android`,'changegoods')
+				axiosUtil(this, `/api/product/queryitem`,'changegoods',{page:10,curpage:this.curpage})
 				//this.$refs.loadmore.onTopLoaded()
 			},
 			handleBottomChange(status) {
@@ -95,7 +95,7 @@
 		    },
 			loadBottom() {
 				this.curpage++;
-				axiosUtil(this, `/api/api/index.php?c=goods&a=goods_list&gc_id=2139&page=10&curpage=${this.curpage}&appversion=1.3.0&devicetype=weixin&phonetype=android`,'changegoods')
+				axiosUtil(this, `/api/product/queryitem`,'changegoods',{page:10,curpage:this.curpage})
 				//this.$refs.loadmore.onBottomLoaded()
 			},
 			handleTopChange(status) {
@@ -180,7 +180,7 @@
 		      this.isload=data;
 		    })
 			//axiosUtil(this, `/api/api/index.php?c=goods&a=goods_list&gc_id=2139&page=10&curpage=1&appversion=1.3.0&devicetype=weixin&phonetype=android`,'changegoods');
-			axiosUtil(this, `/api/product/queryitem`,'changegoods');
+			axiosUtil(this, `/api/product/queryitem`,'changegoods',{page:10,curpage:this.curpage});
 	       var mySwiper = new Swiper ('.swiper-container2', {
 	       	freeMode : false,
 	        observer:true,

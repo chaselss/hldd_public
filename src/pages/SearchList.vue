@@ -74,7 +74,7 @@
 					axios.post('/api/product/queryitem',{
 						keyword:this.sendgoods,
 						curpage:1,
-						page:5
+						page:10
 					})
 					.then((res)=>{
 						this.goodslist=res.data.datas.goods_list;
@@ -91,7 +91,7 @@
 					axios.post('/api/product/queryitem',{
 						keyword:this.sendgoods,
 						curpage:1,
-						page:5
+						page:10
 					}).then((res)=>{
 					this.goodslist=res.data.datas.goods_list;
 					this.isload=false;
@@ -111,7 +111,7 @@
 					axios.post('/api/product/queryitem',{
 						keyword:this.sendgoods,
 						curpage:1,
-						page:5
+						page:10
 					}).then((res)=>{
 					this.goodslist=res.data.datas.goods_list;
 					console.log(this.goodslist)
