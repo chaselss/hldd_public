@@ -1,0 +1,159 @@
+#index{
+    .classify{
+        width: 100%;
+        height:100%;
+        .classifyBody{
+            //@extend %textTitle;
+            width: 100%;
+            height:100%;
+            @include flexbox();
+            @include flex-direction(column);
+            header{
+                width: 100%;
+                height: 44.6px;
+                position: relative;
+                .title{
+                    width: 100%;
+                    height: 44.5px;
+                    //position: relative;
+                    @include border(0 0 1px 0,#eeeeee)
+                    .searchbox{
+                        width: 251px;
+                        height: 32px;
+                        //position: absolute;
+                        left: 15px;
+                        top: 6px;
+                        @include border(1px);
+                        .search{
+                            display: inline-block;
+                            width: 17px;
+                            height: 17px;
+                            background: url(~/static/images/searchIcon.png) center center no-repeat;
+                            background-size: 100% 100%;
+                            margin: 7px 0 0 8px;
+                        }
+                    }
+                    .sort{
+                        font-size: 13px;
+                        color: $base-color;
+                        position: absolute;
+                        right: 23px;
+                        top:14px;
+                    }
+                    .sortm::after{
+                        content: "";
+                        position: absolute;
+                        height: 0;
+                        width: 0;
+                        border: .03rem solid transparent;
+                        border-bottom-width: 10px;
+                        border-bottom: 5px solid $base-color;
+                        right:-10px;
+                        top:5px;
+                    }
+                    .sortact::after{
+                        content: "";
+                        position: absolute;
+                        height: 0;
+                        width: 0;
+                        border: .03rem solid transparent;
+                        border-top-width: 10px;
+                        border-top: 5px solid $base-color;
+                        right:-10px;
+                        top:8px;
+                    }
+                
+                }
+            }
+            section{
+                @include flex();
+                @include flexbox();
+                @include flex-direction(column);
+                position: relative;
+                .goods{
+//                  position:absolute;
+//                  top:94.5px;
+//                  bottom: 57px;
+                    overflow-y: scroll;
+                    background: #F3F3F3;
+                    @include flex();
+                    width: 100%;
+                    height:100%;
+                    ul{
+                        width: 100%;
+                        padding:0 10px;
+                        @include flexbox();
+                        @include flex-wrap(wrap);
+                        li{
+                            width: 50%;
+                            padding:.05rem;
+                            dl{
+                                //@include flexbox();
+                                //@include flex-direction(column);
+                                //@include align-items(center);
+
+                                background: white;
+                                dt{
+                                    text-align: center;
+                                    img{
+                                        width:77%
+                                    }
+                                }
+                                dd{
+                                margin-left: .175rem;
+                                    width:77%
+                                }
+                                .dd1{
+                                    height: .54rem;
+                                    padding-top: .15rem;
+                                    line-height: .18rem!important;
+                                    color: #181818;
+                                    font-size: .12rem;
+                                    @include ellipsis(77%, 2);
+                                }
+                                .dd2{
+                                    color: #7a7a7a;
+                                    height:.14rem;
+                                    line-height:.14rem;
+                                    font-size: .12rem;
+                                    @include ellipsis(77%, 1);
+                                    display: inline-block;
+                                }
+                                .dd3{
+                                    font-family: impact;
+                                    font-size: 16px;
+                                    color: #414141;
+                                }
+                            }
+                        }
+                    }
+                }
+                .pull{
+                    width: 100%;
+                    height:100%;
+                    background: rgba(0,0,0,.8);
+                    position: absolute;
+                    z-index: 999;
+                    ul{
+                        padding: 0 15px;
+                        width: 100%;
+                        background: white;
+                        li{
+                            height:44px;
+                            line-height: 44px;
+                            border-top:1px solid #eeeeee;
+                        }
+                        li:nth-child(1){
+                            border: none;
+                        }
+                        .isActive{
+                            color: $base-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    
+}

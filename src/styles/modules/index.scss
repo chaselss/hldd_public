@@ -1,0 +1,133 @@
+@charset "UTF-8";
+body{
+    background: #fff;
+    #app{
+        height: 100%;
+        #index{
+            @include flexbox();
+            @include flex-direction(column);
+            height: 100%;
+            width: 100%;
+            .indextitle{
+                @extend %headtitle;
+            }
+            section{
+                @include flex();
+                width: 100%;
+            }
+            footer{
+                height: 57px;
+                width: 100%;
+                @include border(1px 0 0 0,#ebebeb);
+            
+                ul{
+                    height: 100%;
+                    width: 100%;
+                    @include flexbox();
+                    @include align-items(center);
+                    li{
+                        @include flex();
+                        text-align: center;
+                        width: 100%;
+                        padding: 8px 0 6px 0;
+                        @include flexbox();
+                        @include flex-direction(column);
+                        @include align-items(center);
+                        .fa{
+                            display: inline-block;
+                            width:.22rem;
+                            height:.22rem;
+                            margin-bottom: 5px;
+                        }
+                        .footerTitle{
+                            color: #999999;
+                            height:.15rem;
+                            line-height:.15rem;
+                            font-size:12px;
+                        }
+                        .index{
+                            background: url(~/static/images/home.png);
+                            background-size: 100% 100%;
+                        }
+                        .category{
+                            background: url(~/static/images/category.png);
+                            background-size: 100% 100%;
+                        }
+                        .discovery{
+                            background: url(~/static/images/discovery.png);
+                            background-size: 100% 100%;
+                        }
+                        .car{
+                            background: url(~/static/images/cart.png);
+                            background-size: 100% 100%;
+                        }
+                        .userCenter{
+                            background: url(~/static/images/mine.png);
+                            background-size: 100% 100%;
+                        }
+                        &.index_actived{
+                            .fa{
+                                background: url(~/static/images/homeAct.png);
+                                background-size: 100% 100%;
+
+                            }
+                            .footerTitle{
+                                color:#181818;
+
+                            }
+                        }
+                        &.category_actived{
+                            .fa{
+
+                                background: url(~/static/images/categoryAct.png);
+                                background-size: 100% 100%;
+                            }
+                            .footerTitle{
+                                color:#181818;
+
+                            }
+
+                        }
+                        &.discovery_actived{
+                            .fa{
+
+                                background: url(~/static/images/discoveryAct.png);
+                                background-size: 100% 100%;
+                            }
+                            .footerTitle{
+                                color:#181818;
+
+                            }
+
+                        }
+                        &.car_actived{
+                            .fa{
+
+                                background: url(~/static/images/cartAct.png);
+                                background-size: 100% 100%;
+                            }
+                            .footerTitle{
+                                color:#181818;
+
+                            }
+
+                        }
+                        &.userCenter_actived{
+                            .fa{
+
+                                background: url(~/static/images/mineAct.png);
+                                background-size: 100% 100%;
+                            }
+                            .footerTitle{
+                                color:#181818;
+
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,122 @@
+.classify{
+    #cartList{
+        background: #f5f5f5 !important;
+        li{
+            width: 100%;
+            margin-bottom: 10px;
+            background:#fff;
+            .titlebox{
+                width: 100%;
+                height: 45px;
+                padding: 0 60px 0 21px;
+                h4{
+                    height: 100%;
+                    font-size: 15px;
+                    width: auto;
+                    padding-left: 15px;
+                    line-height: 45px;
+                    padding-right: 20px;
+                    color: #181818;
+                    @include ellipsis(auto,1);
+                    text-align: left; 
+                }
+            }
+            .cartitem{
+                height: 100px;
+                width: 100%;
+                padding: 10px;
+                padding-left: 0px;
+                @include border(1px 0 1px 0,#ebebeb);
+                .checkbox{
+                    width: 42px;
+                    height: 42px;
+                    float: left;
+                    line-height: 100px;
+                    input{
+                        display: none;
+                    }
+                    label{
+                        display: inline-block;
+                        height: 20px;
+                        width: 20px;
+                        position: relative;
+                        @include border(1px,#ccc,solid,50%);
+                        cursor: pointer;
+                    }
+                    .labelactive{
+                        i{
+                            
+                            width:70%;
+                            height: 70%;
+                            position: absolute;
+                            left:15%;
+                            top:15%;
+                            background: $base-color;
+                            border-radius: 50%;
+                        }
+
+                    }
+                }
+                img{
+                    height: 80px;
+                    width: 80px;
+                    float: left;
+                }
+                .detail_box{
+                    margin-left: 130px;
+                    width:auto;
+                    h3{
+                        width: auto;
+                        overflow: hidden;
+                        margin: 5px 0 3px;
+                        font-size: 15px;
+                        color: #454545;
+                        line-height: 20px;
+                        font-weight: 500;
+                        @include ellipsis(auto,1);
+                        text-align: left;
+                    }
+                    p{
+                        text-align: left;
+                        color: #aaa;
+                        padding-left: .05rem;
+                        @include ellipsis(auto,1);
+                        font-size: .12rem;
+                    }
+                    .bottom{
+                        @include flexbox();
+                        @include justify-content(space-between);
+                        @include align-items(flex-start);
+                        margin-top: 10px;
+                        
+                        .quantity{
+                            color:#656565;
+                            font-size: .14rem;
+                            b,input{
+                                height: .35rem;
+                                width:.35rem;
+                                text-align: center;
+                                display: inline-block;
+                                border:0;
+                                border:1px solid  #ccc;
+                                float: left;
+                                line-height: .35rem;
+                                margin-left:-1px;
+                            
+                            }
+                        }
+                        .price{
+                            color:#181818;
+                            font-size: 16px;
+                            font-family:impact;
+                            i{
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

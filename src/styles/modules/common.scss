@@ -1,0 +1,67 @@
+@import "../yo/usage/core/reset";
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+$base-color: #c5904a;
+@font-face {
+    font-family: 'yofont';
+    src: url('../assets/iconfont/iconfont.woff') format('woff'), url('../assets/iconfont/iconfont.ttf') format('truetype')
+}
+
+%headtitle {
+    header {
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(column);
+        height: 45px;
+        display: block;
+        .title {
+            height: 45px;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            position: relative;
+            img {
+                height: 34.3px;
+            }
+            .search {
+                display: inline-block;
+                width: .35rem;
+                height: .35rem;
+                background: url(~/static/images/searchIcon.png) center center no-repeat;
+                background-size: 21px 21px;
+                position: absolute;
+                top: 9px;
+                right: 10px;
+            }
+        }
+    }
+}
+%textTitle{
+    .title{
+        height:.45rem;
+        width: 100%s;
+        p{
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 48px;
+            text-align: center;
+            color: #181818;
+        }
+    }
+    .title::after{
+        content: "";
+        height: 1px;
+        background: #d6d2cf;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        //transform: scaleY(.5);
+        //-webkit-transform: scaleY(.5);
+    }
+}
+
+    

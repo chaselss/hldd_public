@@ -1,0 +1,257 @@
+#index{
+    .mine{
+        width: 100%;        
+        height:100%;
+        background: #F5F2F0;
+        overflow-y: scroll;
+        .minetop{
+                width:100%;
+                height:183px;
+                padding-top:50px;
+                background: url(../../static/images/bg.png) center
+                center no-repeat;
+                background-size: 100% 100%;
+            .mineheader{
+                position: relative;
+                width: 100%;
+                height:65px;
+                padding-left: 15px;
+                @include flexbox();
+                .img1{
+                    width:62px;
+                    height:62px;
+                    border-radius: 50%;
+                    border: 3px solid #90898c;  
+                }
+            }
+            .img2{
+                width: 85px;
+                height:26px;
+                position: absolute;
+                left: 100px;
+            }
+            .islogin{
+                width:.78rem;
+                height:.45rem;
+                padding:.7rem 0 0 .1rem;
+                position: relative;
+                p{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    margin :0;
+                    width: .78rem;
+                    margin-left: .15rem;
+                    overflow: hidden;
+                    word-wrap: nowrap;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    
+                }
+                img{
+                    position: absolute;
+                    top:.18rem;
+                    left:0;
+                    margin-left: .15rem;
+                    width: 64px;
+                    border-radius: 0;
+                    height: 18px;
+                    border: 0;
+                    margin-top: .05rem;
+                }
+            }
+            .msg{
+                width:.38rem;
+                height:.41rem;
+                padding: .1rem;
+                position: absolute;
+                right:.05rem;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                .img3{
+                    width:.18rem;
+                    height:.18rem;
+                }
+            }
+            p{
+                font-size: .13rem;
+                margin-top: .3rem;
+                margin-left: .15rem;
+                color: white;
+                position: relative;
+                span{
+                    position: absolute;
+                    right:.2rem;
+                    font-weight: 100;
+                    font-size: .12rem;
+                    color: #989897;
+                    top:0;
+                    img{
+                        margin-left: .1rem;
+                        margin-top: -.02rem;
+                        height:.12rem;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        .money{
+           @include flexbox();
+           height:.78rem;
+           padding:.05rem 0;
+           padding-left: .15rem;
+           margin-bottom: .1rem;
+           background: white;
+           .wallet{
+               width:.84rem;
+               height:.66rem;
+               @include flexbox();
+               @include border(0 1px 0 0,#EAE8E6);
+               @include align-items(center);
+               img{
+                   width:.18rem;
+                   height:.15rem;
+               }
+               span{
+                    font-size: .16rem;
+                    line-height: .16rem;
+                    padding-left: .1rem;
+                    color: #181818;
+               }
+           }
+           ul{
+              @include flex();
+              @include flexbox(); 
+              @include align-content(center);
+              li{
+                  @include flex();
+                  margin-top:.07rem;
+                  @include flexbox(); 
+                  @include flex-direction(column);
+                  @include align-items(center);
+                  p:nth-child(1){
+                     font-size: 12px;
+                    color: #9f9f9f;
+                  }
+                  p:nth-child(2){
+                     font-size: 16px;
+                    color: #414141;
+                    font-weight: normal;
+                    padding-top: 10px;
+                    font-weight: bold;
+                  }
+                  
+              }
+           }
+        }
+        .order{
+            background: white;
+            height:.45rem;
+            width:100%;
+            padding:0 .15rem;
+            .ordertop{
+                height:.45rem;
+                width:100%;
+                @include flexbox();
+                @include justify-content(space-between);
+                border-bottom: 1px solid #dfdfdf;;
+                span{
+                    font-size: 16px;
+                    color: #181818;
+                    line-height: .45rem;
+                }
+                i{
+                  line-height: .45rem;
+                }
+            }
+            
+        }
+        .state{
+            height:.72rem;
+            width: 100%;
+            background: white;
+            margin-bottom: .1rem;
+            ul{
+                @include flexbox();
+                width: 100%;
+                height:100%;
+                li{
+                    @include flex();
+                    @include flexbox();
+                    @include flex-direction(column);
+                    @include justify-content(center);
+                    @include align-items(center);
+                    img{
+                        width:.18rem;
+                        height:.18rem;
+                    }
+                    p{
+                        margin-top:.07rem;
+                    }
+                }
+            }
+        }
+        .gift{
+             margin-bottom: .1rem;
+            .gifttop{
+                background: white;
+                height:.45rem;
+                width:100%;
+                padding-left: .15rem;
+                span{
+                    line-height: .45rem;
+                    color: #181818;
+                    font-size: .16rem;
+                    
+                }
+                div{
+                    background: #ebebeb;
+                    width: 80%;
+                    height: 1px;
+                    text-align: center;
+                    margin-left: 10%;
+                }
+            }
+            .giftbottom{
+                @include flexbox();
+                height:.55rem;
+                padding-top:.07rem;
+                width: 100%;
+                background: white;
+                .giftleft{
+                    height:.4rem;
+                    @include flex();
+                    border-right: 1px solid #ebebeb;
+                    img{
+                       width:.3rem; 
+                       height:.3rem;
+                       margin-left: 20%;
+                    }
+                    span{
+                        margin-left: .10rem;
+                        line-height: .4rem;
+                        font-size: 13px;
+                        color: #414141;
+                    }
+                }
+                .giftright{
+                    height:.4rem;
+                    @include flex();
+                    img{
+                       width:.3rem; 
+                       height:.3rem;
+                       margin-left: 15%;
+                    }
+                    span{
+                        margin-left: .10rem;
+                        line-height: .4rem;
+                        font-size: 13px;
+                        color: #414141;
+                    }
+                }
+            }
+        }
+    }
+    
+}

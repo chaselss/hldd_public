@@ -1,0 +1,188 @@
+@charset "UTF-8";
+@import '../components/banner.scss';
+.home{
+    .title{
+        text-align: center;
+        height:45px;        
+        position: relative;
+        line-height: 45px;
+        img{
+            height:100%;
+            width: auto !important;
+        }
+        .search{
+            display: inline-block;
+            width: .35rem;
+            height:.35rem;
+            background: url(~/static/images/searchIcon.png) center center no-repeat;
+            background-size:21px 21px;
+            position: absolute;
+            top:9px;
+            right:10px;
+        }
+    }
+    .wrap{
+        position: absolute;
+        top:45px;
+        bottom: 57px;
+        overflow-x: hidden;
+        overflow-y:scroll;
+        display: inline-block;
+        width: 100%;
+        .banner{
+            width: 100%;
+            overflow: hidden;
+        }
+        &::after{
+            content: "";
+            height: 57px;
+            width: 100%;
+            display: inline-block;
+        }
+
+    }
+    .container{
+        width: 100%;
+        // padding: 
+        height: 3.06rem;
+        text-align: center;
+        .fl_title{
+           padding-left: 3%;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: -.02rem;  
+            margin-bottom: .1rem;             
+            img{
+                height: 100%;
+                width: 100%;
+            }
+            &.f2{
+               
+            }
+        }
+       
+        .floor{
+            @include border(0 0 5px 0,#F5F2F0);
+
+        }
+        
+        .floor1,.floor3{
+           
+           width: 100%;
+            .sift_good{
+               
+                width: 100%;
+            }
+            .sift_subject{
+               
+                width: 100%;
+                margin: -.16rem .07rem .08rem .07rem;
+                img{
+                    width: 50%;   
+                    padding: .03rem;
+
+                }
+                &.f3{
+                    margin: 0 .07rem .08rem .07rem;
+                    img{
+                        width: 50%;
+                        padding: 0.03rem;
+                        
+                    }
+                }
+            }
+           
+            
+        }
+        .floor4{
+            .f4{
+                @include flexbox();
+                @include flex-wrap(wrap);
+                div{
+                    
+                    width: 50%;
+                    padding: .03rem;
+                    p{
+                        @include ellipsis(100%,1);
+                        font-size: .14rem;
+                        color: #181818;
+                        margin-top: 5px;
+                        height: 20px;
+                        padding-left: .1rem;
+                        text-align: left;
+                    }
+                    span{
+                        display: block;
+                        text-align: left;
+                        font-size:.14rem;
+                        font-family: impact;
+                        color: $base-color;
+                        height: .2rem;
+                        line-height: .2rem;
+                        padding-left: .1rem;
+                    }
+                    img{
+                        width: 100%;
+                       
+                        
+                    }
+                }
+            }
+        }
+        .floor2{
+           
+            width: 100%;
+            .new_good{
+                .floor2_subject{
+                    width: 100%;
+                    height:1.27rem;
+                    .sub2_swiper{
+                        width: 100%;
+                        height: 100%;
+                        position: static;
+                        .swiper-wrapper{
+                            width: 100%;
+                            height: 127px;
+                            .swiper-slide{
+                                width: auto !important;
+                                height:1.27rem;
+                                white-space: nowrap;
+                                img{
+                                    width: .94rem;
+                                    height: 100%;
+                                    margin: -.04rem .1rem;
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+
+        }
+    }
+    .buttonword {
+        font-size: 14px;
+        text-align: center;
+        height: 60px;
+        line-height: 60px;
+        color: #999;
+        position: relative;
+        &:before {
+            top: 28px;
+            left: 5%;
+            width: 30%;
+        }
+        &:after {
+            top: 28px;
+            right: 5%;
+            width: 30%;
+        }
+        &:before,&:after {
+            content: '';
+            height: 1px;
+            background-color: #eee;
+            position: absolute;
+            z-index: 100;
+        }
+    }
+}

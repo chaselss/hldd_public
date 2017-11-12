@@ -1,0 +1,324 @@
+#detail1_box{
+    @include flexbox();
+    @include flex-direction(column);
+    height: 100%;
+    width: 100%;
+   
+    header{
+        width: 100%;
+        height: 45px;
+        @include flexbox();
+        @include align-items(center);
+        @include border(0 0 1px 0,#d6d2cf);
+
+        & i{
+           font-size: 25px; 
+           width: 45px;
+           text-align: center;
+        }
+        h2{
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: #181818;
+            @include flex();
+            padding:5px;
+            @include ellipsis(100%,1);
+        }
+    }
+    section{
+        @include flex();
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        padding: .3rem 0 .2rem 0;
+
+        .title,.arrow{
+            position: absolute;
+            width: 100%;
+            z-index: 200;
+        }
+        .title{
+            height: .3rem;
+            top:0;
+            display: relative;
+            .chakan{
+               
+                bottom: -100%;
+                display: inline-block;
+                @include border(1px 1px 1px 1px,#e8e8e8);
+                height: 100%;
+                right: .1rem;
+                padding-left:3px;
+                font-size: .14rem;
+                position: absolute !important;
+                color: #181818;
+                z-index: 201;
+                background: #fff;
+                line-height: 30px;
+                text-align: center;
+            }
+            i{
+                font-size: .16rem;
+            }
+        }
+        .arrow{
+            height: .2rem;
+            bottom:0;
+            text-align: center;
+            line-height: 100%;
+           img{
+               height: 70%;
+               width: auto;
+           }
+           
+        }
+        .detail1_swiper{       
+            width: 100%;
+            height: 100%;
+            .swiper-wrapper{
+                width: 100%;
+                
+                .swiper-slide{
+                   height:auto;
+                    display: inline-block;
+
+                    img{
+                        width:100%;
+                        height: auto;
+                    }
+                }
+            }
+            .detail1-pagination{
+                top: 50%;
+                z-index: 200;
+                left: 5%;
+                position: absolute;
+                .swiper-pagination-bullet{
+                    background: #ccc;
+                    width: 10px;
+                    height: 10px;
+                }
+                .swiper-pagination-bullet-active{
+                    background: #333;
+                }
+            }
+           
+        }
+    }
+    footer{
+        width: 100%;
+        height: 49px;
+        @include border(1px 0 0 0,#ebebeb);
+        background:#f1f1f1;
+        font-size:0;
+        .detail_price{
+            font-size:16px;
+            display: inline-block;
+            color: #666;
+            padding:0 8px;
+            line-height: 30px;
+            margin: 10px;
+            height: 30px;
+            
+           i, .pri_real{
+                color: #181818;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            .specify{
+                font-size: 14px;
+            }
+
+        }
+        button{
+            color:#fff;
+            border:0;
+            border-radius: 0;
+            height: 50px;
+            font-size: 15px;
+            width: 92px;
+            padding:0 8px;
+            line-height: 50px;
+            text-align: center;
+           
+            float: right;
+            &.send{
+                background: #bc914d;
+
+            }
+            &.add{
+                background: #181818;
+            }
+        }
+    }
+    .goods_detail_text{
+        height: 80%;
+        width: 100%;
+        position: fixed;
+        background: #fff;
+        opacity: 0.9;
+        bottom:0;
+        z-index: 999;
+        padding:5.66% 0 9.434% 0;
+        h4{
+            font-size: .16rem;
+            font-weight: bold;
+            margin: 0;
+            padding: 0 10px;
+            line-height: 25px;
+        }
+        p{
+            padding: 15px 10px 20px 10px;
+            color: #656565;
+            font-size: .14rem;
+            line-height: 20px;
+            position: relative;
+            margin: 0; 
+        }
+        li{
+            height:45px;
+            width: 100%;
+            p{
+                font-size: .14rem;
+                color:#5c5c5c;
+                height: 100%;
+                line-height: 100%;
+                padding-left: 15px;
+            }
+        }
+    }
+    .fade-enter-active,.fade-leave-active{
+        transition : all .5s ease-out;
+    }
+    .fade-enter, .fade-leave-to{
+        bottom:-100%;
+    }
+     .fade-enter-to,.fade-leave{
+         bottom:0;
+    }
+     
+    .select_box{
+        width: 100%;
+        max-height:80%;
+        background: #fff;
+        z-index: 999;
+        position: fixed;
+        padding: 0 30px 30px;
+        bottom:0;
+        .chil1{
+            margin-bottom: 6.1781%;
+            text-align: center;
+            font-weight: 400;
+            font-size:15px;
+            position: relative;
+            height: 45px;
+            img{
+                width: .68rem;
+                height:auto!important;
+                border:1px solid #d6d2cf;
+                margin-right: .18rem; 
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: 900;
+                
+            }
+            b{
+                display: inline-block;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(center);
+                font-size: .14rem;
+                font-weight: 800;
+                height:100%;
+                .close{
+                    position: absolute;
+                    right: 0;
+                    font-size: 14px;
+                }
+            }
+        }
+        .chil2{
+            max-height:200px;
+            margin-bottom: 9.86%;
+            overflow-y: scroll;
+           h2{
+               font-size: .15rem;
+               margin-bottom: 14px;
+               
+           }
+           span{
+               display: inline-block;
+               height: .40rem;
+               min-width: .40rem;
+               margin-right: 5px;
+               line-height: .38rem;
+               text-align: center;
+               background: #fff;
+               border:.01rem solid #d6d2cf ;
+               padding: 0 5px;
+               margin-bottom: 5px; 
+               font-size: .12px;
+               vertical-align: top;
+           }
+           .spec_active{
+               background:#ca9d64;
+               height: .40rem;
+               color: #fff;
+               border: 0;
+           }
+        }
+        .chil3{
+           
+            margin-bottom: 10%;
+            
+            h2{
+                font-size: .15rem;
+                margin-bottom: 14px;
+            }
+            div{
+                overflow: hidden;
+            }
+            input,span{
+                float: left;
+                display: inline-block;
+                border:1px solid #ebebeb;
+                height: 41px;
+                width: 41px;
+                text-align: center;
+                margin-right: -1px;
+                line-height: 41px;
+            }
+            
+        }
+        .chil4{
+            margin-bottom:6%;
+            p{
+                font-size: 12px;
+                color: #ce4444;
+            }
+        }
+        button{
+           
+            background: #181818;
+            font-size: 14px;
+            text-align: center;
+            color:#fff;
+            line-height: 41px;
+            border: 0;
+            width: 100%;
+            bottom:0;
+            
+        }
+
+    }
+    .select-leave-active,.select-enter-active{
+        transition: all .5s ease-out;
+    }
+    .select-enter,.select-leave-to{
+        bottom:-100%;
+    }
+    .select-enter-to,.select-leave{
+        bottom:0;
+    }
+}
