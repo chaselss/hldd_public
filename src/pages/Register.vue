@@ -55,8 +55,40 @@
 				this.$router.push({path:'/login'})
 			},
 			register(){
-				var that = this
-				if(this.telText!=''){
+        var that = this
+        /* axios.post(`/api/api/index.php?c=login&a=indexnew&from=mobile`,params,{
+				                  headers:{
+				                     'content-type':'application/x-www-form-urlencoded',
+				                     charset:'UTF-8'
+				                  }
+				              })
+				              .then((res)=>{
+				              	console.log(res)
+				              	if(res.data.code==200){
+				              		this.iserro=true;
+									        this.erroText='登录成功'
+									        localStorage.setItem("HLDD_KEY",res.data.datas.key)
+				              		localStorage.setItem("HLDD_ID",res.data.datas.uid)
+				              		localStorage.setItem("HLDD_NAME",res.data.datas.nickname)
+				              		localStorage.setItem("HLDD_PH",res.data.datas.mobile)
+				              		localStorage.setItem("HLDD_OK",true)
+                        this.$store.commit('loginkey',res.data.datas.key)       
+                        setTimeout(function(){
+				              			this.$router.push({path:'/mine'})
+				              		}.bind(this),1000)
+				              	}else{
+				              		this.erroText=res.data.datas.error;
+				              	}
+                      }) */
+           /*  axios.post('/api/users/register',{
+              username:this.telText,
+              password:this.psdText,
+              role: 1
+            })
+            .then((res)=>{
+              console.log(res)
+            }) */
+				 if(this.telText!=''){
 					if(this.psdText!=""){
 						if( /^[0-9,a-z,A-Z]{6,16}$/.test(this.psdText) ){
 							var uuid = this.uuid()
@@ -113,7 +145,7 @@
 					setTimeout(function(){
 						that.iserro=false;
 					}.bind(that),2000)
-				}
+				} 
 			},
 			uuid(){
 			    var s = [];

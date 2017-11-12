@@ -21,7 +21,7 @@
 			}
 		},
 		mounted() {
-			this.$store.dispatch('getContents',`/api/api/index.php?c=prime&a=getPrimeList&appversion=1.3.0&devicetype=weixin&phonetype=android`)
+			this.$store.dispatch('getContents',`/api/quality/getList`)
 		},
 		computed: {
 			

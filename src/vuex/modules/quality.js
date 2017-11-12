@@ -24,7 +24,8 @@ const actions = {
 
 const mutations = {
   [types.QUALITY_CONTENT] (state, res) {
-    state.content = res.data.datas.list
+    console.log(res.data.data.page.result)
+    state.content = res.data.data.page.result
   }
 }
 
